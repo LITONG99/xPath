@@ -7,7 +7,7 @@ An alternative implementation based on [Mindspore](https://www.mindspore.cn/) is
 
 
 ## Requirements
-- CPU or NVIDIA GPU, Linux, Python 3.7
+- Python 3.7
 - See requirements.txt for more details.
 
 ## Datasets
