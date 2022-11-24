@@ -8,19 +8,23 @@ An alternative implementation based on [Mindspore](https://www.mindspore.cn/) is
 
 ## Requirements
 - Python 3.7
-- See requirements.txt for more details.
+- torch~=1.10.0
+- dgl~=0.8.2
+- numpy~=1.21.6
+- tqdm~=4.64.0
+
 
 ## Datasets
 
 The heterogeneous graph datasets we use are [DBLP](https://github.com/BUPT-GAMMA/HeCo/tree/main/data/dblp), [ACM](https://github.com/BUPT-GAMMA/HeCo/tree/main/data/acm), and [IMDB](https://www.kaggle.com/carolzhangdc/imdb-5000-movie-dataset). 
-We put the processed data sets in the `ckpt` folder. Taking DBLP dataset as an example, corresponding graph data include:
+Datasets are provided in the `data` folder. Taking DBLP dataset as an example:
 - `dblp_graph.bin`: Heterogeneous graph。
 - `dblp_index_60.bin`: Training, validation, and test set for SimpleHGN.
 - `dblp_index_2000.bin`: Training, validation, and test set for HGT.
 
 ## Train HGNs
 
-We provide the trained HGNs in `ckpt/{dataset_name}/bk` for reproducing the results in our paper. To retrain the HGNs, run
+Trained HGNs are provided in `ckpt/{dataset_name}/bk` for reproducing the results in our paper. To retrain the HGNs, run
 
 ```shell
 # edit configurations in config.py
@@ -33,3 +37,4 @@ python train.py
 # edit configurations in config.py
 python main.py
 ```
+
